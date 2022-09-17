@@ -15,8 +15,8 @@ public static class PostgresExtensions
             options.UseNpgsql($"Host=localhost;Database=HappyX;Username=postgres;Password=postgres", 
                 optionsBuilder => optionsBuilder.MigrationsAssembly("HappyX.Api")));
         
-        //serviceCollection.AddPostgresRepositories();
-        //serviceCollection.AddTransient<WorkUnit>();
+        serviceCollection.AddPostgresRepositories();
+        serviceCollection.AddTransient<WorkUnit>();
     }
     
     public static IServiceCollection AddPostgresRepositories(this IServiceCollection serviceCollection)
