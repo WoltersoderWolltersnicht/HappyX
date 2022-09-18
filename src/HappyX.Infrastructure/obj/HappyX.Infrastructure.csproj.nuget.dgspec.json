@@ -1,35 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj": {}
+    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj": {
+    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj",
+        "projectUniqueName": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj",
         "projectName": "HappyX.Domain",
-        "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj",
-        "packagesPath": "C:\\Users\\aaaro\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\obj\\",
+        "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj",
+        "packagesPath": "/home/shiroaku/.nuget/packages/",
+        "outputPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aaaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/shiroaku/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "http://nuget.xmltravelgate.com/v3": {},
-          "http://nuget.xmltravelgate.com/v3/index.json": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.xmltravelgate.com/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -58,8 +50,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,43 +59,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj": {
+    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj",
+        "projectUniqueName": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj",
         "projectName": "HappyX.Infrastructure",
-        "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\aaaro\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\obj\\",
+        "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj",
+        "packagesPath": "/home/shiroaku/.nuget/packages/",
+        "outputPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aaaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/shiroaku/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "http://nuget.xmltravelgate.com/v3": {},
-          "http://nuget.xmltravelgate.com/v3/index.json": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.xmltravelgate.com/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj": {
-                "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj"
+              "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj": {
+                "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj"
               }
             }
           }
@@ -140,8 +123,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -150,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }
