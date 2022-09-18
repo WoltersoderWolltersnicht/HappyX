@@ -86,3 +86,5 @@ E:\Projects\Personal\C#\HappyX\src\HappyX.Api\obj\Debug\net6.0\HappyX.Api.genrun
 E:\Projects\Personal\C#\HappyX\src\HappyX.Api\obj\Debug\net6.0\ref\HappyX.Api.dll
 E:\Projects\Personal\C#\HappyX\src\HappyX.Api\bin\Debug\net6.0\LanguageExt.Core.dll
 E:\Projects\Personal\C#\HappyX\src\HappyX.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Projects\Personal\C#\HappyX\src\HappyX.Api\bin\Debug\net6.0\AutoFixture.dll
+E:\Projects\Personal\C#\HappyX\src\HappyX.Api\bin\Debug\net6.0\Fare.dll

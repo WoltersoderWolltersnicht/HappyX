@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HappyX.Infrastructure.Data.EF.Repositories;
+namespace HappyX.Infrastructure.Data.Repositories;
 
 internal static class RepositoryExtensions
 {

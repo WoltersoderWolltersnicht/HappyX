@@ -1,25 +1,25 @@
 ﻿using System.Linq.Expressions;
 using HappyX.Domain.Internal;
-using HappyX.Infrastructure.Data.EF.Repositories;
+using HappyX.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace HappyX.Infrastructure.Data.EF.Postgres;
+namespace HappyX.Infrastructure.Data.EF;
 
-public sealed class PostgresRepository<TEntity> : IBaseRepository<TEntity>
+public sealed class EfRepository<TEntity> : IBaseRepository<TEntity>
  where TEntity : BaseEntity
 {
-    private DbContext? _context;
+    private DbContext _context;
     private DbSet<TEntity> _dbSet;
     
-    public void InitDbContext(DbContext? context)
+    public void InitDbContext(DbContext context)
     {
         _context = context ?? throw  new Exception("Invalid Database Context");
         _dbSet = context?.Set<TEntity>() ?? throw new Exception($"DbSet {typeof(TEntity)} not found");
     }
 
     public async Task<IEnumerable<TEntity>> Get(
-        Expression<Func<TEntity, bool>>? filter = null,
-        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
+        Expression<Func<TEntity, bool>> filter = null,
+        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
         string includeProperties = "")
     {
         IQueryable<TEntity> query = _dbSet;
@@ -47,7 +47,7 @@ public sealed class PostgresRepository<TEntity> : IBaseRepository<TEntity>
         }
     }
     
-    public async Task<TEntity?> GetById(int id)
+    public async Task<TEntity> GetById(int id)
     {
         return await _dbSet.FindAsync(id);
     }

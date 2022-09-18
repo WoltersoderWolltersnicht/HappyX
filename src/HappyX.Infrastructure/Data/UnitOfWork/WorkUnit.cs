@@ -1,18 +1,19 @@
 ﻿using HappyX.Domain.Internal;
-using HappyX.Infrastructure.Data.EF.Repositories;
+using HappyX.Infrastructure.Data.EF;
+using HappyX.Infrastructure.Data.Repositories;
 
-namespace HappyX.Infrastructure.Data.EF.UnitOfWork;
+namespace HappyX.Infrastructure.Data.UnitOfWork;
 
-public sealed class WorkUnit : IDisposable
+public class WorkUnit : IDisposable
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly HappyXContext _context;
  
     private bool _disposed = false;
     
-    private IBaseRepository<User>? _userRepository ; 
-    private IBaseRepository<Mood>? _moodRepository; 
-    private IBaseRepository<Record>? _recordRepository; 
+    private IBaseRepository<User> _userRepository; 
+    private IBaseRepository<Mood> _moodRepository; 
+    private IBaseRepository<Record> _recordRepository; 
     
     public WorkUnit(IServiceProvider serviceProvider, HappyXContext context)
     {
@@ -26,9 +27,9 @@ public sealed class WorkUnit : IDisposable
     
     public IBaseRepository<Record> RecordRepository => _recordRepository ??= _serviceProvider.GetRepository<Record>(_context);
     
-    public async Task SaveAsync()
+    public virtual async Task SaveAsync()
     {
-        await _context.SaveChangesAsync();
+        await _context?.SaveChangesAsync();
     }
 
     private void Dispose(bool disposing)
@@ -37,7 +38,7 @@ public sealed class WorkUnit : IDisposable
         {
             if (disposing)
             {
-                _context.Dispose();
+                _context?.Dispose();
             }
         }
         _disposed = true;

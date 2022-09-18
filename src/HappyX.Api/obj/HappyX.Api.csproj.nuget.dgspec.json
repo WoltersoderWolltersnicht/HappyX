@@ -1,34 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Api/HappyX.Api.csproj": {}
+    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Api\\HappyX.Api.csproj": {}
   },
   "projects": {
-    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Api/HappyX.Api.csproj": {
+    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Api\\HappyX.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Api/HappyX.Api.csproj",
+        "projectUniqueName": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Api\\HappyX.Api.csproj",
         "projectName": "HappyX.Api",
-        "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Api/HappyX.Api.csproj",
-        "packagesPath": "/home/shiroaku/.nuget/packages/",
-        "outputPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Api/obj/",
+        "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Api\\HappyX.Api.csproj",
+        "packagesPath": "C:\\Users\\aaaro\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/shiroaku/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\aaaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.xmltravelgate.com/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.xmltravelgate.com/v3": {},
+          "http://nuget.xmltravelgate.com/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj": {
-                "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj"
+              "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj": {
+                "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj"
               }
             }
           }
@@ -76,7 +84,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -88,28 +97,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj": {
+    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj",
+        "projectUniqueName": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj",
         "projectName": "HappyX.Domain",
-        "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj",
-        "packagesPath": "/home/shiroaku/.nuget/packages/",
-        "outputPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/obj/",
+        "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj",
+        "packagesPath": "C:\\Users\\aaaro\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/shiroaku/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\aaaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.xmltravelgate.com/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.xmltravelgate.com/v3": {},
+          "http://nuget.xmltravelgate.com/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -138,7 +155,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -147,35 +165,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj": {
+    "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj",
         "projectName": "HappyX.Infrastructure",
-        "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/HappyX.Infrastructure.csproj",
-        "packagesPath": "/home/shiroaku/.nuget/packages/",
-        "outputPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Infrastructure/obj/",
+        "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\HappyX.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\aaaro\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/shiroaku/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\aaaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.xmltravelgate.com/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.xmltravelgate.com/v3": {},
+          "http://nuget.xmltravelgate.com/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj": {
-                "projectPath": "/home/shiroaku/Projects/C-Sharp/HappyX/src/HappyX.Domain/HappyX.Domain.csproj"
+              "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj": {
+                "projectPath": "E:\\Projects\\Personal\\C#\\HappyX\\src\\HappyX.Domain\\HappyX.Domain.csproj"
               }
             }
           }
@@ -190,6 +216,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.17.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -211,7 +241,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -220,7 +251,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
         }
       }
     }

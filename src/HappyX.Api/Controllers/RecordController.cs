@@ -1,6 +1,6 @@
 ﻿using HappyX.Domain.ApiInput.Record;
 using HappyX.Domain.Internal;
-using HappyX.Infrastructure.Data.EF.UnitOfWork;
+using HappyX.Infrastructure.Data.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyX.Api.Controllers;

@@ -1,4 +1,4 @@
-﻿namespace HappyX.Api.Controllers;
+﻿namespace HappyX.Domain.ApiInput.User;
 
 public class UserInput
 {

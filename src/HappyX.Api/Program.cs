@@ -1,11 +1,11 @@
+using HappyX.Infrastructure.Data;
 using HappyX.Infrastructure.Data.EF;
-using HappyX.Infrastructure.Data.EF.Postgres;
 
 var builder = WebApplication.CreateBuilder(args);
 
-DatabaseOptions databaseOptions = builder.Configuration.GetSection("DataBaseOptions").Get<DatabaseOptions>();
+DatabaseOptions databaseOptions = builder.Configuration.GetSection("DatabaseOptions").Get<DatabaseOptions>();
 
-    builder.Services.AddPostgres(databaseOptions);
+    builder.Services.AddDatabase(databaseOptions);
 
 
 builder.Services.AddControllers();
