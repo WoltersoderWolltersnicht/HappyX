@@ -12,11 +12,11 @@ public static class PostgresExtensions
         DatabaseOptions databaseOptions)
     {
         serviceCollection.AddDbContext<HappyXContext>(options =>
-            options.UseNpgsql($"Host=localhost;Database=HappyX;Username=postgres;Password=postgres", 
+            options.UseNpgsql($"Host=db;Database=HappyX;Username=sa;Password=postgres", 
                 optionsBuilder => optionsBuilder.MigrationsAssembly("HappyX.Api")));
         
-        serviceCollection.AddPostgresRepositories();
-        serviceCollection.AddTransient<WorkUnit>();
+        //serviceCollection.AddPostgresRepositories();
+        //serviceCollection.AddTransient<WorkUnit>();
     }
     
     public static IServiceCollection AddPostgresRepositories(this IServiceCollection serviceCollection)
