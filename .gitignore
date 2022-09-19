@@ -2,3 +2,6 @@
 /src/HappyX.Domain/obj
 /src/HappyX.Infrastructure/obj
 /.idea
+/src/HappyX.Api/bin
+/src/HappyX.Domain/bin
+/src/HappyX.Infrastructure/bin

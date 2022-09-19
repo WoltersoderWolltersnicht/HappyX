@@ -9,4 +9,10 @@ public class MockWorkUnit : WorkUnit
         : base(serviceProvider, null)
     {
     }
+    
+    public override async Task SaveAsync()
+    {
+        
+    }
+    
 }

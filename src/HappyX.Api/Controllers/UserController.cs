@@ -17,9 +17,9 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("ActivateUser", Name = "ActivateUser")]
-    public async Task<IActionResult> ActivateUser([FromBody] string slackId)
+    public async Task<IActionResult> ActivateUser([FromBody] UserFilter userFilter)
     {
-        var users = await _workUnit.UserRepository.Get(user => user.SlackId == slackId);
+        var users = await _workUnit.UserRepository.Get(user => user.SlackId == userFilter.SlackId);
         var user = users.FirstOrDefault();
 
         if (user == null) return BadRequest();
@@ -32,9 +32,9 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("DisableUser", Name = "DisableUser")]
-    public async Task<IActionResult> DisableUser([FromBody] string slackId)
+    public async Task<IActionResult> DisableUser([FromBody] UserFilter userFilter)
     {
-        var users = await _workUnit.UserRepository.Get(user => user.SlackId == slackId);
+        var users = await _workUnit.UserRepository.Get(user => user.SlackId == userFilter.SlackId);
         var user = users.FirstOrDefault();
 
         if (user == null) return BadRequest();
