@@ -11,7 +11,7 @@ internal static class EfExtensions
         DatabaseOptions databaseOptions)
     {
         string connectionString =
-            $"Host={DatabaseOptions.Host};Database={DatabaseOptions.Database};Username={DatabaseOptions.Username};Password={DatabaseOptions.Password}";
+            $"Host={databaseOptions.Host};Database={databaseOptions.Database};Username={databaseOptions.Username};Password={databaseOptions.Password}";
 
         serviceCollection.AddDbContext<HappyXContext>(
             options =>

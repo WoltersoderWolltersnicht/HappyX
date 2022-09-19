@@ -3,11 +3,11 @@
 public class DatabaseOptions
 {
     public string Type { get; set; }
-    internal static string Host => null;
+    public string Host { get; set; }
 
-    internal static string Database => null;
+    public string Database { get; set; }
 
-    internal static string Username => null;
+    public string Username { get; set; }
 
-    internal static string Password => null;
+    public string Password { get; set; }
 }

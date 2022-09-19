@@ -9,6 +9,6 @@ services:
     db:
         image: postgres
         environment:
-            POSTGRES_USER: sa
+            POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
             ACCEPT_EULA: "Y"

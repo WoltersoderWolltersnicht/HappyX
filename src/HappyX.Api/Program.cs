@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 DatabaseOptions databaseOptions = builder.Configuration.GetSection("DatabaseOptions").Get<DatabaseOptions>();
 
-    builder.Services.AddDatabase(databaseOptions);
+builder.Services.AddDatabase(databaseOptions);
 
 
 builder.Services.AddControllers();
