@@ -3,12 +3,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
 COPY . /app
 WORKDIR /app
-RUN dotnet tool install --global dotnet-ef
-ENV PATH="$PATH:/root/.dotnet/tools"
-WORKDIR /src/HappyX.Api
-RUN dotnet ef database update
-EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 80
+ENV ASPNETCORE_URLS=http://+:80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
