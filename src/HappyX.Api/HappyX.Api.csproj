@@ -24,4 +24,8 @@
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Migrations\HappyXContextModelSnapshot.cs" />
+    </ItemGroup>
+
 </Project>
