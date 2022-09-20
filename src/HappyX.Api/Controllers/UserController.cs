@@ -18,41 +18,34 @@ public class UserController : ControllerBase
         _workUnit = workUnit;
     }
     
-    [HttpPost("ActivateUser", Name = "ActivateUser")]
-    public async Task<IActionResult> ActivateUser([FromBody] UserFilter userFilter)
+    [HttpPost("AddUser", Name = "AddUser")]
+    public async Task<IActionResult> ActivateUser([FromBody] UserInput userInput)
     {
-        var users = await _workUnit.UserRepository.Get(user => user.SlackId == userFilter.SlackId);
+        var users = await _workUnit.UserRepository.Get(user => user.SlackId == userInput.SlackId);
         var user = users.FirstOrDefault();
 
-        if (user == null) return BadRequest();
-
-        user.Subscribed = true;
-        _workUnit.UserRepository.Update(user);
+        if (user is null){
+            user = new User(userInput.SlackId, userInput.UserName, true);
+            _workUnit.UserRepository.Insert(user);
+        }else{
+            user.Subscribed = true;
+            _workUnit.UserRepository.Update(user);
+        };
         
         await _workUnit.SaveAsync();
         return Ok();
     }
 
-    [HttpPost("DisableUser", Name = "DisableUser")]
-    public async Task<IActionResult> DisableUser([FromBody] UserFilter userFilter)
+    [HttpDelete("DeleteUser", Name = "DeleteUser")]
+    public async Task<IActionResult> DeleteUser([FromBody] UserFilter userFilter)
     {
         var users = await _workUnit.UserRepository.Get(user => user.SlackId == userFilter.SlackId);
         var user = users.FirstOrDefault();
 
-        if (user == null) return BadRequest();
+        if (user is null) return BadRequest();
 
         user.Subscribed = false;
         _workUnit.UserRepository.Update(user);
-
-        await _workUnit.SaveAsync();
-        return Ok();
-    }
-    
-    [HttpPost("AddUsers", Name = "AddUsers")]
-    public async Task<IActionResult> AddUsers([FromBody] IEnumerable<UserInput> userInputs)
-    {
-        List<User> users = userInputs.Select(userInput => new User(userInput.UserName, userInput.SlackId, userInput.Subscribed)).ToList();
-        _workUnit.UserRepository.InsertMany(users);
         
         await _workUnit.SaveAsync();
         return Ok();
