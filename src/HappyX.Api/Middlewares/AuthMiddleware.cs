@@ -17,7 +17,6 @@ public class AuthMiddleware
         if (string.IsNullOrWhiteSpace(password) || password is not "ALX")
         {
             context.Response.StatusCode = 401;
-            context.Response.Body = new MemoryStream(Encoding.UTF8.GetBytes($"Authentication {password} is invalid"));
         }
         await _next(context);
     }
