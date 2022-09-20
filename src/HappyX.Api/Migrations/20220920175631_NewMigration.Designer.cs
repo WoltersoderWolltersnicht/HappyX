@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HappyX.Api.Migrations
 {
     [DbContext(typeof(HappyXContext))]
-    [Migration("20220919211234_NewMigration")]
+    [Migration("20220920175631_NewMigration")]
     partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
