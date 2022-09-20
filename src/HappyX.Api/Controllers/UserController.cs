@@ -1,6 +1,8 @@
 ﻿using HappyX.Domain.ApiInput.User;
+using HappyX.Domain.ApiOutput.User;
 using HappyX.Domain.Internal;
 using HappyX.Infrastructure.Data.UnitOfWork;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyX.Api.Controllers;
@@ -54,5 +56,13 @@ public class UserController : ControllerBase
         
         await _workUnit.SaveAsync();
         return Ok();
+    }
+    
+    [HttpPost("GetUsers", Name = "GetUsers")]
+    public async Task<IActionResult> AddUsers()
+    {
+        IEnumerable<User> users = await _workUnit.UserRepository.Get(u => u.Subscribed == true);
+        IEnumerable<UserOutput> userOutputs = users.Select(u => new UserOutput(u.Username, u.SlackId));
+        return Ok(userOutputs);
     }
 }

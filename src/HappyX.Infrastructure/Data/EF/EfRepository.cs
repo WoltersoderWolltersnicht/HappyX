@@ -34,9 +34,7 @@ public sealed class EfRepository<TEntity> : IBaseRepository<TEntity>
         {
             query = query.Where(filter);
         }
-
-
-
+        
         if (orderBy != null)
         {
             return await orderBy(query).ToListAsync();

@@ -1,4 +1,5 @@
 ﻿using HappyX.Domain.ApiInput.Record;
+using HappyX.Domain.ApiOutput.Record;
 using HappyX.Domain.Internal;
 using HappyX.Infrastructure.Data.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
@@ -48,8 +49,9 @@ public class RecordController : ControllerBase
             null,
             "users,moods");
 
-        if (!records.Any()) return NotFound();
+        List<Record> recordsList = records.ToList();
+        if (!recordsList.Any()) return NotFound();
         
-        return Ok(records);
+        return Ok(recordsList.Select(r => new RecordOutput(r.User?.SlackId, r.CreationDate, r.Mood.Name)));
     }
 }
