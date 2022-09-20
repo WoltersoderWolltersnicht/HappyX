@@ -13,11 +13,10 @@ public class AuthMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        string password = context.Request.Headers["Authentication"].ToString();
+        string password = context.Request.Headers["Authentication"];
         if (string.IsNullOrWhiteSpace(password) || password is not "ALX")
         {
             context.Response.StatusCode = 401;
-            context.Response.Body = new MemoryStream(Encoding.UTF8.GetBytes($"Authentication {password} is invalid"));
         }
         await _next(context);
     }

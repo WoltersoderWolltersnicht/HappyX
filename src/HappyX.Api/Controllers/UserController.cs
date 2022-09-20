@@ -19,13 +19,13 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("AddUser", Name = "AddUser")]
-    public async Task<IActionResult> ActivateUser([FromBody] UserInput userInput)
+    public async Task<IActionResult> AddUser([FromBody] UserInput userInput)
     {
         var users = await _workUnit.UserRepository.Get(user => user.SlackId == userInput.SlackId);
         var user = users.FirstOrDefault();
 
         if (user is null){
-            user = new User(userInput.SlackId, userInput.UserName, true);
+            user = new User(userInput.UserName, userInput.SlackId, true);
             _workUnit.UserRepository.Insert(user);
         }else{
             user.Subscribed = true;
@@ -51,8 +51,8 @@ public class UserController : ControllerBase
         return Ok();
     }
     
-    [HttpPost("GetUsers", Name = "GetUsers")]
-    public async Task<IActionResult> AddUsers()
+    [HttpGet("GetUsers", Name = "GetUsers")]
+    public async Task<IActionResult> GetUsers()
     {
         IEnumerable<User> users = await _workUnit.UserRepository.Get(u => u.Subscribed == true);
         IEnumerable<UserOutput> userOutputs = users.Select(u => new UserOutput(u.Username, u.SlackId));

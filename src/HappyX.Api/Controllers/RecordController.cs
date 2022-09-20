@@ -28,14 +28,15 @@ public class RecordController : ControllerBase
     {
         var users = await _workUnit.UserRepository.Get(user => user.SlackId == recordInput.SlackId);
         var user = users.FirstOrDefault();
-        if (user == null) return BadRequest();
+        if (user == null) return BadRequest("User not found");
 
         var moods = await _workUnit.MoodRepository.Get(mood => mood.Name == recordInput.MoodName);
         var mood = moods.FirstOrDefault();
-        if (mood == null) return BadRequest();
+        if (mood == null) return BadRequest("Mood not found");
         
-        Record record = new(user, mood);
+        Record record = new(user.Id, mood.Id);
         var savedRecord = _workUnit.RecordRepository.Insert(record);
+        await _workUnit.SaveAsync();
         return Ok();
     }
 
@@ -47,7 +48,7 @@ public class RecordController : ControllerBase
             recordFilter.StartDate >= record.CreationDate &&
             recordFilter.EndDate <= record.CreationDate,
             null,
-            "users,moods");
+            "User,Mood");
 
         List<Record> recordsList = records.ToList();
         if (!recordsList.Any()) return NotFound();
