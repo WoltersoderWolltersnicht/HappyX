@@ -9,10 +9,4 @@
       <PackageReference Include="LanguageExt.Core" Version="4.3.2-beta" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ApiOutput\Mood" />
-      <Folder Include="ApiOutput\Record" />
-      <Folder Include="ApiOutput\User" />
-    </ItemGroup>
-
 </Project>
