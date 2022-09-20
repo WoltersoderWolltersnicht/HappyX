@@ -26,6 +26,11 @@
 
     <ItemGroup>
       <Compile Remove="Migrations\HappyXContextModelSnapshot.cs" />
+      <Compile Remove="Startup.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="appsettings.Local.json" />
     </ItemGroup>
 
 </Project>

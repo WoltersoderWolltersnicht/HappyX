@@ -45,8 +45,8 @@ public class RecordController : ControllerBase
     {
         IEnumerable<Record> records = await _workUnit.RecordRepository.Get(record =>
             (!recordFilter.SlackIds.Any() || recordFilter.SlackIds.Contains(record.User.SlackId)) &&
-            recordFilter.StartDate >= record.CreationDate &&
-            recordFilter.EndDate <= record.CreationDate,
+            (recordFilter.StartDate == null || recordFilter.StartDate >= record.CreationDate) &&
+            (recordFilter.EndDate == null  || recordFilter.EndDate <= record.CreationDate),
             null,
             "User,Mood");
 

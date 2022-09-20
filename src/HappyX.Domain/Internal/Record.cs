@@ -6,12 +6,12 @@ public class Record : BaseEntity
     {
         UserId = userId;
         MoodId = moodId;
-        CreationDate = DateTime.Now;
+        CreationDate = DateTime.UtcNow;
     }
     
     public DateTime CreationDate { get; set; }
     public int UserId { get; set; }
     public int MoodId { get; set; }
-    public User? User { get; set; }
-    public Mood? Mood { get; set; }
+    public User User { get; set; }
+    public Mood Mood { get; set; }
 }
