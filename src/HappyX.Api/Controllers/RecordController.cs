@@ -36,6 +36,7 @@ public class RecordController : ControllerBase
         
         Record record = new(user.Id, mood.Id);
         var savedRecord = _workUnit.RecordRepository.Insert(record);
+        
         await _workUnit.SaveAsync();
         return Ok();
     }
@@ -45,8 +46,8 @@ public class RecordController : ControllerBase
     {
         IEnumerable<Record> records = await _workUnit.RecordRepository.Get(record =>
             (!recordFilter.SlackIds.Any() || recordFilter.SlackIds.Contains(record.User.SlackId)) &&
-            (recordFilter.StartDate == null || recordFilter.StartDate >= record.CreationDate) &&
-            (recordFilter.EndDate == null  || recordFilter.EndDate <= record.CreationDate),
+            (recordFilter.StartDate == null || recordFilter.StartDate.Value.Date >= record.CreationDate.Date) &&
+            (recordFilter.EndDate == null  || recordFilter.EndDate.Value.Date <= record.CreationDate.Date),
             null,
             "User,Mood");
 

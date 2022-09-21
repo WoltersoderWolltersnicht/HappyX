@@ -9,6 +9,7 @@ DatabaseOptions databaseOptions = builder.Configuration.GetSection("DatabaseOpti
 
 builder.Services.AddDatabase(databaseOptions);
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 builder.Services.AddControllers();
 
@@ -30,6 +31,7 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
+app.UseMiddleware<ErrorFilterMiddleware>();
 app.UseMiddleware<AuthMiddleware>();
 
 app.MapControllers();

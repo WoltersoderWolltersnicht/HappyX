@@ -3,11 +3,10 @@
     "HappyX": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Prod"
       },
-      "applicationUrl": "https://localhost8080;http://localhost:8081",
+      "applicationUrl": "http://localhost:8080;",
       "dotnetRunMessages": true
     },
     "Docker": {
