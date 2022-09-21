@@ -12,20 +12,20 @@ builder.Services.AddDatabase(databaseOptions);
 
 builder.Services.AddControllers();
 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "MetadataRestAPI", Version = "v1" });
+    c.SwaggerDoc("v1", new() { Title = "HappyXApi", Version = "v1" });
     c.OperationFilter<AddRequiredHeaderParameter>();
 });
 
 var app = builder.Build();
 
 app.UseSwagger();
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MetadataRestAPI v1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "HappyXApi v1");
     
     c.RoutePrefix = string.Empty;
 });
