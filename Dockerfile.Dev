@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0
+COPY ./ /app
+WORKDIR /app
+RUN ["dotnet", "restore"]
+RUN ["dotnet", "build"]
+EXPOSE 8080/tcp
+
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+CMD dotnet ef database update --project ./src/HappyX.Api/.;dotnet run --project ./src/HappyX.Api/.
