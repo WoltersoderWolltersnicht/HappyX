@@ -10,16 +10,20 @@ public class AddRequiredHeaderParameter : IOperationFilter
         if (operation.Parameters == null)
             operation.Parameters = new List<OpenApiParameter>();
 
-        operation.Parameters.Add(new OpenApiParameter
+        if (context.MethodInfo.DeclaringType?.Name != "StatusController")
         {
-            Name = "Authentication",
-            In = ParameterLocation.Header,
-            Description = "Auth header",
-            Required = true,
-            Schema = new OpenApiSchema
+            operation.Parameters.Add(new OpenApiParameter
             {
-                Type = "string" 
-            }
-        });
+                Name = "Authentication",
+                In = ParameterLocation.Header,
+                Description = "Auth header",
+                Required = true,
+
+                Schema = new OpenApiSchema
+                {
+                    Type = "string"
+                }
+            });
+        }
     }
 }

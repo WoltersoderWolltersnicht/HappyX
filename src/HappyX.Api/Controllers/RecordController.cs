@@ -17,12 +17,6 @@ public class RecordController : ControllerBase
         _workUnit = workUnit;
     }
 
-    [HttpGet("health")]
-    public string Health()
-    {
-        return "ok";
-    }
-
     [HttpPost("AddRecord", Name = "AddRecord")]
     public async Task<IActionResult> AddRecord([FromBody] RecordInput recordInput)
     {
@@ -36,7 +30,6 @@ public class RecordController : ControllerBase
         
         Record record = new(user.Id, mood.Id);
         var savedRecord = _workUnit.RecordRepository.Insert(record);
-        
         await _workUnit.SaveAsync();
         return Ok();
     }

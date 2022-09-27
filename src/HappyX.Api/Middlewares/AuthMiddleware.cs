@@ -14,10 +14,12 @@ public class AuthMiddleware
     public async Task InvokeAsync(HttpContext context)
     {
         string password = context.Request.Headers["Authentication"];
-        if (string.IsNullOrWhiteSpace(password) || password is not "ALX")
+
+        if (!context.Request.Path.StartsWithSegments("/Status/Health") && (string.IsNullOrWhiteSpace(password) || password is not "ALX"))
         {
             context.Response.StatusCode = 401;
         }
+
         await _next(context);
     }
 }
